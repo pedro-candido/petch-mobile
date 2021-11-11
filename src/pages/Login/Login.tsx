@@ -5,6 +5,7 @@ import { Container, Header, InputWrapper, Subtitle, Wrapper } from './style';
 import { Divider, Input, PasswordInput } from '../../components';
 import { Button } from '../../components';
 import { NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
+import { GoogleButton } from '../../components/Button';
 
 const Login = (): JSX.Element => {
   const [email, setEmail] = useState('');
@@ -30,9 +31,10 @@ const Login = (): JSX.Element => {
             />
             <PasswordInput />
           </InputWrapper>
-          <Button>Entrar</Button>
+          <Button buttonText="Entrar" />
         </Wrapper>
         <Divider>ou</Divider>
+        <GoogleButton buttonText="Entre com o Google" />
       </Container>
     </LinearGradient>
   );

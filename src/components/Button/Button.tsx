@@ -1,20 +1,32 @@
 import React from 'react';
+import { View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import { ButtonProps } from '../../types/interfaces';
-import { StyledButton, StyledGoogleButton, StyledText } from './style';
+import {
+  GoogleButtonContainer,
+  IconContainer,
+  StyledButton,
+  StyledGoogleButton,
+  StyledIcon,
+  StyledText,
+} from './style';
 
-const Button = ({ children }: ButtonProps): JSX.Element => {
+const Button = ({ buttonText }: ButtonProps): JSX.Element => {
   return (
     <StyledButton activeOpacity={0.8} onPress={() => console.log('Hello World')}>
-      <StyledText>{children}</StyledText>
+      <StyledText>{buttonText}</StyledText>
     </StyledButton>
   );
 };
 
-const GoogleButton = ({ children }: ButtonProps) => {
+const GoogleButton = ({ buttonText }: ButtonProps) => {
   return (
-    <StyledGoogleButton title={children}>
-      <StyledText>{children}</StyledText>
-    </StyledGoogleButton>
+    <GoogleButtonContainer activeOpacity={0.75}>
+      <IconContainer>
+        <StyledIcon color={'#fff'} name="google" type="font-awesome" size={20} />
+      </IconContainer>
+      <StyledText>{buttonText}</StyledText>
+    </GoogleButtonContainer>
   );
 };
 

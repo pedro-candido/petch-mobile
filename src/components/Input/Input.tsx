@@ -16,7 +16,7 @@ const Input = ({ value, type, ...rest }: InputProps): JSX.Element => {
 const PasswordInput = (): JSX.Element => {
   return (
     <InputContainer>
-      <StyledInput placeholder={'Senha'} />
+      <StyledInput secureTextEntry={true} placeholder={'Senha'} />
       <IconContainer>
         <TouchableOpacity activeOpacity={0.7}>
           <StyledIcon color={'#b3b3b3'} name="eye" type="feather" size={20} />

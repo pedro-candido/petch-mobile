@@ -5,7 +5,7 @@ export interface InputProps extends TextInputProps {
 }
 
 export interface ButtonProps {
-  children: string;
+  buttonText: string;
 }
 
 export interface DividerProps {
