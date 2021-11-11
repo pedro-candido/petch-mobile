@@ -17,3 +17,7 @@ export const StyledText = styled.Text`
   font-weight: 600;
   font-size: 18px;
 `;
+
+export const StyledGoogleButton = styled.TouchableOpacity`
+  background-color: #fd267d;
+`;

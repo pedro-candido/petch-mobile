@@ -1,7 +1,6 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { ButtonProps } from '../../types/interfaces';
-import { StyledButton, StyledText } from './style';
+import { StyledButton, StyledGoogleButton, StyledText } from './style';
 
 const Button = ({ children }: ButtonProps): JSX.Element => {
   return (
@@ -11,4 +10,12 @@ const Button = ({ children }: ButtonProps): JSX.Element => {
   );
 };
 
-export { Button };
+const GoogleButton = ({ children }: ButtonProps) => {
+  return (
+    <StyledGoogleButton>
+      <StyledText>{children}</StyledText>
+    </StyledGoogleButton>
+  );
+};
+
+export { Button, GoogleButton };

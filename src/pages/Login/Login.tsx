@@ -3,8 +3,8 @@ import { SafeAreaView, Text } from 'react-native';
 import Logo from '../../assets/logo';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Container, Header, InputWrapper, Subtitle, Wrapper } from './style';
-import { Input, PasswordInput } from '../../components';
-import { Button } from '../../components/Button';
+import { Divider, Input, PasswordInput } from '../../components';
+import { Button } from '../../components';
 
 const Login = (): JSX.Element => {
   return (
@@ -21,6 +21,7 @@ const Login = (): JSX.Element => {
           </InputWrapper>
           <Button>Entrar</Button>
         </Wrapper>
+        <Divider>ou</Divider>
       </Container>
     </LinearGradient>
   );
