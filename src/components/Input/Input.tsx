@@ -11,7 +11,7 @@ const Input = ({ children, type }: InputProps): JSX.Element => {
   );
 };
 
-const PasswordInput = () => {
+const PasswordInput = (): JSX.Element => {
   return (
     <InputContainer>
       <StyledInput placeholder={'Senha'} secureTextEntry={true} />
@@ -20,7 +20,7 @@ const PasswordInput = () => {
   );
 };
 
-const SearchInput = ({ children }: InputProps) => {
+const SearchInput = ({ children }: InputProps): JSX.Element => {
   return (
     <InputContainer>
       <StyledInput placeholder={children} />
