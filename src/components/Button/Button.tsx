@@ -5,7 +5,7 @@ import { StyledButton, StyledText } from './style';
 
 const Button = ({ children }: ButtonProps): JSX.Element => {
   return (
-    <StyledButton activeOpacity={0.1} onPress={() => console.log('Hello World')}>
+    <StyledButton activeOpacity={0.8} onPress={() => console.log('Hello World')}>
       <StyledText>{children}</StyledText>
     </StyledButton>
   );
