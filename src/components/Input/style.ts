@@ -18,5 +18,5 @@ export const InputContainer = styled.View`
 export const StyledIcon = styled(Icon)`
   position: absolute;
   color: #0c0c0c;
-  right: 10;
+  right: 10px;
 `;

@@ -8,7 +8,7 @@ export const StyledButton = styled.TouchableOpacity`
   height: 46px;
   align-items: center;
   justify-content: center;
-  margin: 5% 0;
+  margin: 2% 0;
 `;
 
 export const StyledText = styled.Text`
@@ -16,4 +16,8 @@ export const StyledText = styled.Text`
   display: flex;
   font-weight: 600;
   font-size: 18px;
+`;
+
+export const StyledGoogleButton = styled.TouchableOpacity`
+  background-color: #fd267d;
 `;

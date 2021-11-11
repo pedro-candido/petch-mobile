@@ -8,3 +8,7 @@ export interface InputProps {
 export interface ButtonProps {
   children: string;
 }
+
+export interface DividerProps {
+  children: string;
+}

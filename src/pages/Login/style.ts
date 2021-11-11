@@ -14,9 +14,13 @@ export const Header = styled.View`
 export const Subtitle = styled.Text`
   margin-top: 5%;
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
 `;
 
 export const Wrapper = styled.View`
   display: flex;
+`;
+
+export const InputWrapper = styled.View`
+  margin: 10% 0;
 `;
