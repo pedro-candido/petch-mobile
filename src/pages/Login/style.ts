@@ -13,7 +13,7 @@ export const Header = styled.View`
 
 export const Subtitle = styled.Text`
   margin-top: 5%;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.subtitleText};
   font-size: 18px;
 `;
 

@@ -12,7 +12,7 @@ const Button = ({ children }: ButtonProps): JSX.Element => {
 
 const GoogleButton = ({ children }: ButtonProps) => {
   return (
-    <StyledGoogleButton>
+    <StyledGoogleButton title={children}>
       <StyledText>{children}</StyledText>
     </StyledGoogleButton>
   );

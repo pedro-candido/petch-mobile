@@ -6,7 +6,7 @@ export const StyledInput = styled.TextInput`
   box-shadow: 0 7px 64px rgba(0, 0, 0, 0.07);
   padding: 16px 14px;
   height: 48px;
-  border-radius: 6px;
+  border-radius: ${({ theme }) => theme.borderRadius};
   font-size: 18px;
 `;
 
@@ -15,8 +15,11 @@ export const InputContainer = styled.View`
   margin: 1%;
 `;
 
-export const StyledIcon = styled(Icon)`
+export const IconContainer = styled.View`
   position: absolute;
-  color: #0c0c0c;
-  right: 10px;
+  right: 20px;
+  top: 30%;
+  z-index: 10;
 `;
+
+export const StyledIcon = styled(Icon)``;

@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const StyledButton = styled.TouchableOpacity`
   background-color: #ff7854;
-  border-radius: 6px;
+  border-radius: ${({ theme }) => theme.borderRadius};
   border: 2px solid #fff;
   width: 100%;
   height: 46px;
@@ -18,6 +18,6 @@ export const StyledText = styled.Text`
   font-size: 18px;
 `;
 
-export const StyledGoogleButton = styled.TouchableOpacity`
+export const StyledGoogleButton = styled.Button`
   background-color: #fd267d;
 `;
