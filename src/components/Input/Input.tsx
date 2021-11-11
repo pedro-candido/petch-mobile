@@ -1,12 +1,14 @@
 import React from 'react';
 import { InputProps } from '../../types/interfaces';
+import { View } from 'react-native';
 
-import { InputContainer, StyledIcon, StyledInput } from './style';
+import { IconContainer, InputContainer, StyledIcon, StyledInput } from './style';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const Input = ({ children, type }: InputProps): JSX.Element => {
+const Input = ({ value, type, ...rest }: InputProps): JSX.Element => {
   return (
     <InputContainer>
-      <StyledInput placeholder={children} keyboardType={type} />
+      <StyledInput value={value} keyboardType="email-address" {...rest} />
     </InputContainer>
   );
 };
@@ -14,17 +16,25 @@ const Input = ({ children, type }: InputProps): JSX.Element => {
 const PasswordInput = (): JSX.Element => {
   return (
     <InputContainer>
-      <StyledInput placeholder={'Senha'} secureTextEntry={true} />
-      <StyledIcon name="eye" type="feather" size={14} />
+      <StyledInput secureTextEntry={true} placeholder={'Senha'} />
+      <IconContainer>
+        <TouchableOpacity activeOpacity={0.7}>
+          <StyledIcon color={'#b3b3b3'} name="eye" type="feather" size={20} />
+        </TouchableOpacity>
+      </IconContainer>
     </InputContainer>
   );
 };
 
-const SearchInput = ({ children }: InputProps): JSX.Element => {
+const SearchInput = ({ ...rest }: InputProps): JSX.Element => {
   return (
     <InputContainer>
-      <StyledInput placeholder={children} />
-      <StyledIcon name="search" type="feather" size={14} />
+      <StyledInput {...rest} />
+      <IconContainer>
+        <TouchableOpacity>
+          <StyledIcon color={'#b3b3b3'} name="search" type="feather" size={14} />
+        </TouchableOpacity>
+      </IconContainer>
     </InputContainer>
   );
 };

@@ -1,12 +1,11 @@
-import { KeyboardType } from 'react-native';
+import { KeyboardType, TextInputProps } from 'react-native';
 
-export interface InputProps {
-  children: string;
+export interface InputProps extends TextInputProps {
   type?: KeyboardType;
 }
 
 export interface ButtonProps {
-  children: string;
+  buttonText: string;
 }
 
 export interface DividerProps {
