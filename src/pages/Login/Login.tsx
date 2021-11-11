@@ -1,7 +1,18 @@
 import React, { useState } from 'react';
 import Logo from '../../assets/logo';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Container, Header, InputWrapper, Subtitle, Wrapper } from './style';
+import {
+  Container,
+  CreateAccount,
+  CreateAccountText,
+  CreateAccountTextBold,
+  ForgotPassword,
+  ForgotPasswordText,
+  Header,
+  InputWrapper,
+  Subtitle,
+  Wrapper,
+} from './style';
 import { Divider, Input, PasswordInput } from '../../components';
 import { Button } from '../../components';
 import { NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
@@ -35,6 +46,14 @@ const Login = (): JSX.Element => {
         </Wrapper>
         <Divider>ou</Divider>
         <GoogleButton buttonText="Entre com o Google" />
+        <ForgotPassword>
+          <ForgotPasswordText>Esqueceu a senha?</ForgotPasswordText>
+        </ForgotPassword>
+        <CreateAccount>
+          <CreateAccountText>
+            Não tem conta? <CreateAccountTextBold>Cadastre-se</CreateAccountTextBold>
+          </CreateAccountText>
+        </CreateAccount>
       </Container>
     </LinearGradient>
   );
