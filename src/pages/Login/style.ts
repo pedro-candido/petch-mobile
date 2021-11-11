@@ -24,3 +24,30 @@ export const Wrapper = styled.View`
 export const InputWrapper = styled.View`
   margin: 10% 0;
 `;
+
+export const ForgotPassword = styled.View`
+  margin-top: 15%;
+  display: flex;
+  align-items: center;
+`;
+
+export const ForgotPasswordText = styled.Text`
+  font-size: 18px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.primary.main.contrastColor};
+`;
+
+export const CreateAccount = styled.View`
+  margin-top: 15%;
+  display: flex;
+  align-items: center;
+`;
+
+export const CreateAccountText = styled.Text`
+  color: ${({ theme }) => theme.colors.primary.main.contrastColor};
+  font-size: 18px;
+`;
+
+export const CreateAccountTextBold = styled.Text`
+  font-weight: 600;
+`;
