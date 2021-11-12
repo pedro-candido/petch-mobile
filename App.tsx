@@ -7,8 +7,10 @@ import theme from './src/theme';
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Login />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <Login />
+      </ThemeProvider>
+    </Provider>
   );
 }

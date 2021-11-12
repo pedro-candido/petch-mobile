@@ -4,8 +4,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 import {
   Container,
   CreateAccount,
-  CreateAccountText,
-  CreateAccountTextBold,
   ForgotPassword,
   ForgotPasswordText,
   Header,
@@ -49,11 +47,11 @@ const Login = (): JSX.Element => {
         <ForgotPassword>
           <ForgotPasswordText>Esqueceu a senha?</ForgotPasswordText>
         </ForgotPassword>
-        <CreateAccount>
-          <CreateAccountText>
-            Não tem conta? <CreateAccountTextBold>Cadastre-se</CreateAccountTextBold>
-          </CreateAccountText>
-        </CreateAccount>
+        <CreateAccount.Container>
+          <CreateAccount.Text>
+            Não tem conta? <CreateAccount.Text>Cadastre-se</CreateAccount.Text>
+          </CreateAccount.Text>
+        </CreateAccount.Container>
       </Container>
     </LinearGradient>
   );

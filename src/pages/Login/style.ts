@@ -37,17 +37,17 @@ export const ForgotPasswordText = styled.Text`
   color: ${({ theme }) => theme.colors.primary.main.contrastColor};
 `;
 
-export const CreateAccount = styled.View`
-  margin-top: 15%;
-  display: flex;
-  align-items: center;
-`;
-
-export const CreateAccountText = styled.Text`
-  color: ${({ theme }) => theme.colors.primary.main.contrastColor};
-  font-size: 18px;
-`;
-
-export const CreateAccountTextBold = styled.Text`
-  font-weight: 600;
-`;
+export const CreateAccount = {
+  Container: styled.View`
+    margin-top: 15%;
+    display: flex;
+    align-items: center;
+  `,
+  Text: styled.Text`
+    color: ${({ theme }) => theme.colors.primary.main.contrastColor};
+    font-size: 18px;
+  `,
+  TextBold: styled.Text`
+    font-weight: 600;
+  `,
+};
