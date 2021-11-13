@@ -14,9 +14,11 @@ const slice = createSlice({
     isPasswordValid(state, action) {},
     setEmail({ email }, { payload }) {
       email = payload;
+      console.log(email);
     },
     setPassword({ password }, { payload }) {
       password = payload;
+      console.log(password);
     },
   },
 });
