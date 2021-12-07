@@ -4,8 +4,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 import {
   Container,
   CreateAccount,
-  CreateAccountText,
-  CreateAccountTextBold,
   ForgotPassword,
   ForgotPasswordText,
   Header,
@@ -15,15 +13,13 @@ import {
 } from './style';
 import { Divider, Input, PasswordInput } from '../../components';
 import { Button } from '../../components';
-import { NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
 import { GoogleButton } from '../../components/Button';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
+import { selectLogin } from './LoginSelectors';
 
 const Login = (): JSX.Element => {
-  const [email, setEmail] = useState('');
-
-  const handleChangeEmail = (text: string) => {
-    setEmail(text);
-  };
+  const { email, password } = useSelector(selectLogin);
 
   return (
     <LinearGradient colors={['#FF7854', '#FD267D']}>
@@ -40,7 +36,7 @@ const Login = (): JSX.Element => {
               placeholder="E-mail"
               onChangeText={(text) => setEmail(text)}
             />
-            <PasswordInput />
+            <PasswordInput value={password} />
           </InputWrapper>
           <Button buttonText="Entrar" />
         </Wrapper>
@@ -49,11 +45,11 @@ const Login = (): JSX.Element => {
         <ForgotPassword>
           <ForgotPasswordText>Esqueceu a senha?</ForgotPasswordText>
         </ForgotPassword>
-        <CreateAccount>
-          <CreateAccountText>
-            Não tem conta? <CreateAccountTextBold>Cadastre-se</CreateAccountTextBold>
-          </CreateAccountText>
-        </CreateAccount>
+        <CreateAccount.Container>
+          <CreateAccount.Text>
+            Não tem conta? <CreateAccount.Text>Cadastre-se</CreateAccount.Text>
+          </CreateAccount.Text>
+        </CreateAccount.Container>
       </Container>
     </LinearGradient>
   );
