@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { ButtonProps } from '../../types/interfaces';
+import { ButtonProps } from '../../utils/interfaces';
 import {
   GoogleButtonContainer,
   IconContainer,

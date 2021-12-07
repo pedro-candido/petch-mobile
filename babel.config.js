@@ -10,6 +10,7 @@ module.exports = function (api) {
           "@petch/pages": "./src/pages",
           "@petch/constants": "./src/constants",
           "@petch/theme": "./src/theme",
+          "@petch/styles": "./src/styles",
           "@petch/reducers": "./src/reducers",
           "@petch/routes": "./src/routes",
           "@petch/store": "./src/store",
