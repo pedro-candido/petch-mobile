@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '../../assets/logo';
+import Logo from '../../../assets/logo.svg';
 import { LinearGradient } from 'expo-linear-gradient';
 import {
   Container,
@@ -18,7 +18,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { selectLogin } from './LoginSelectors';
 
-const Login = (): JSX.Element => {
+const Login = () => {
   const { email, password } = useSelector(selectLogin);
 
   return (
@@ -30,12 +30,7 @@ const Login = (): JSX.Element => {
         </Header>
         <Wrapper>
           <InputWrapper>
-            <Input
-              type="email-address"
-              value={email}
-              placeholder="E-mail"
-              onChangeText={(text) => setEmail(text)}
-            />
+            <Input type="email-address" value={email} placeholder="E-mail" />
             <PasswordInput value={password} />
           </InputWrapper>
           <Button buttonText="Entrar" />
