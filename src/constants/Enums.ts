@@ -6,3 +6,11 @@ export enum RouteNames {
   SETTINGS = 'Configurações',
   SEARCH = 'Busca',
 }
+
+export enum AlignTypes {
+  CENTER = 'center',
+  RIGHT = 'right',
+  LEFT = 'left',
+  SPACE_BETWEEN = 'space-between',
+  SPACE_AROUND = 'space-around',
+}

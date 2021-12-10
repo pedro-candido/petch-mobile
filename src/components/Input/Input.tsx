@@ -1,9 +1,12 @@
 import React from 'react';
-import { InputProps } from '../../types/interfaces';
-import { View } from 'react-native';
+import { InputProps } from '../../utils/interfaces';
+import { NativeEventEmitter, View } from 'react-native';
 
 import { IconContainer, InputContainer, StyledIcon, StyledInput } from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useDispatch, useSelector } from 'react-redux';
+import { setPassword } from '@petch/reducers/login/login.reducer';
+import { selectPassword } from '@petch/pages/Login/LoginSelectors';
 
 const Input = ({ value, type, ...rest }: InputProps): JSX.Element => {
   return (
@@ -13,10 +16,22 @@ const Input = ({ value, type, ...rest }: InputProps): JSX.Element => {
   );
 };
 
-const PasswordInput = (): JSX.Element => {
+const PasswordInput = ({ ...rest }: InputProps): JSX.Element => {
+  const dispatch = useDispatch();
+  const password = useSelector(selectPassword);
+  const handleChange = ({ native }: NativeEventEmitter<Change>) => {
+    dispatch(setPassword(event.target.value));
+  };
+
   return (
     <InputContainer>
-      <StyledInput secureTextEntry={true} placeholder={'Senha'} />
+      <StyledInput
+        onChangeText={(event) => handleChange(event)}
+        value={password}
+        secureTextEntry={true}
+        placeholder={'Senha'}
+        {...rest}
+      />
       <IconContainer>
         <TouchableOpacity activeOpacity={0.7}>
           <StyledIcon color={'#b3b3b3'} name="eye" type="feather" size={20} />
